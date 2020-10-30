@@ -20,9 +20,14 @@ It requires observation, concentration and a good memory to win.
 ### Rules
 
 * You will start by flipping over one card
-* If the next card you flip matches, a pop up alert notifies you and you get +1 to your score
-* These cards then disspear
-* If the next card you flip does not match, a pop up alert notifies you of ths and the cards flip back
+* If the next card you flip matches, you get +1 to your score
+* These cards then disappear
+* If the next card you flip does not match, the cards flip back
 * The game continues until you match all the cards on the board
+
+## Prerequisites
+
+Basic knowledge of HTML5, CSS3, and JavaScript.
+We are going to use some of the in-built functions of JavaScript.
 
 
