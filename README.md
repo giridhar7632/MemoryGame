@@ -27,6 +27,7 @@ It requires observation, concentration and a good memory to win.
 
 ## Prerequisites
 
+![prerequisites](https://cloud-h9glprsfs.vercel.app/0prerequisites.png)
 Basic knowledge of HTML5, CSS3, and JavaScript.
 We are going to use some of the in-built functions of JavaScript.
 
