@@ -73,4 +73,30 @@ Click the Run button to check your output, whether all the tags are working.
 
 ## Styling
 
-Now hop on to `stlye.css` file. Let's add some universal styles and styles for our game board. As mentioned before we are going to use images of 100 x 100 px, 
+Now hop on to `stlye.css` file. Let's add some universal styles and styles for our game board. As mentioned before we are going to use images of 100 x 100 px, set the board width to `300px` and height to `400px` for 3 x 4 card board. Add the styles below to your project.
+
+```css
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+body{
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  }
+.board {
+  display: flex;
+  flex-wrap: wrap;
+  width: 400px;
+  height: 300px;
+}
+```
+
+Check your output.
+
+![CSS output](https://cloud-mv8zkaxw2.vercel.app/0screenshot_2020-10-31_133838.png)
