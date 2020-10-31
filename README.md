@@ -35,11 +35,13 @@ We are going to use some of the in-built functions of JavaScript. Also the styli
 
 [Repl.it](https://repl.it) is an online code editor. There is no need to install anything which makes coding simpler.
 
-Create a new [HTML,CSS,JS](https://repl.it/languages/html) project or you can just frok this repl [here](https://repl.it/@Giridharhackclu/Memory-game-starter#index.html). Your development environment will be ready in few seconds!
+Create a new [HTML,CSS,JS](https://repl.it/languages/html) project or you can just fork this repl [here](https://repl.it/@Giridharhackclu/Memory-game-starter#index.html). Your development environment will be ready in few seconds!
 
 ![Repl](https://cloud-oyhes1lns.vercel.app/0memory-game-starter.png)
 
 It contains an empty `index.html` file linked with `style.css` and `script.js` files.
 
+We will be using some images for the cards. I will provide the public links for the images where needed. If you prefer to download, here ther are!
 
+<a href="https://cloud-5ystxzer7.vercel.app/06.png" download>![img1](https://cloud-5ystxzer7.vercel.app/06.png)</a>
 
