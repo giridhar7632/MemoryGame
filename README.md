@@ -80,7 +80,7 @@ Now hop on to `stlye.css` file. Let's add some universal styles and styles for o
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: -apple-system, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 body{
   width: 100vw;
@@ -100,3 +100,15 @@ body{
 Check your output.
 
 ![CSS output](https://cloud-mv8zkaxw2.vercel.app/0screenshot_2020-10-31_133838.png)
+
+We completed the markup and styling of our project. Now flip over to `script.js` and let's start creating the game.
+
+## The JavaScript
+
+Create a DOM [event-listener](https://developer.mozilla.org/en-US/docs/Web/API/EventListener) for [`DOMContentLoaded`](https://developer.mozilla.org/en-US/docs/Web/API/Document/DOMContentLoaded_event). All our JavaScript code will be inside the event-listener, which will be excuted after the content loaded.
+
+```javascript
+document.addEventListener('DOMContentLoaded', () => {
+  
+  })
+```
