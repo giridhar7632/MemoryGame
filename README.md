@@ -174,7 +174,9 @@ Now we are going to creating our game board.
 
 ## Game Board
 
-Pick up the `div` element with `class = "board"` using [querySelector](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector) and define it as `board`. Create a function `createBoard()` and let's loop over through elements in `cardArray` and add cards to our game board.
+Pick up the `div` element with `class = "board"` using [querySelector](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector) and define it as `board`. Create a function `createBoard()` and let's loop over through elements in `cardArray` using `for` loop and add cards to our game board.
+
+Create a image element using `document.createElement` for the every card. Using `setAttribute()`, add `src` and `data-id` attributes to the image. Here, [createElement()](https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement) creates the HTML element specified by tagName, [setAttribute()](https://developer.mozilla.org/en-US/docs/Web/API/Element/setAttribute) sets the value of an attribute on the specified element and [data attribute](https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes) allow us to store extra information on standard in the HTML tag.
 
 ```javascript
 const board = document.querySelector('.board')
