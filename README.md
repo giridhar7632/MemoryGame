@@ -41,4 +41,10 @@ Create a new [HTML,CSS,JS](https://repl.it/languages/html) project or you can ju
 
 It contains an empty `index.html` file linked with `style.css` and `script.js` files.
 
-We will be using some images for the cards. I will provide the public links for the images where needed. If you prefer to download, you can download them [here](https://drive.google.com/drive/folders/128S-rB27-86ciSyJvjkfK2NhJeoOmsB3?usp=sharing). You can add your own images. Make sure they are 100x100px to avoid further styling.
+We will be using some images for the cards. I will provide the public links for the images where needed. If you prefer to download, you can download them [here](https://drive.google.com/drive/folders/128S-rB27-86ciSyJvjkfK2NhJeoOmsB3?usp=sharing). You can add your own images. Make sure they are 100 x 100 px to avoid further styling.
+
+After setting up let's get going.
+
+## The HTML
+
+
