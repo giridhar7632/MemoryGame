@@ -28,8 +28,7 @@ It requires observation, concentration and a good memory to win.
 ## Prerequisites
 
 ![prerequisites](https://cloud-h9glprsfs.vercel.app/0prerequisites.png)
-Basic knowledge of HTML5, CSS3, and JavaScript.
-We are going to use some of the in-built functions of JavaScript. Also the styling is as simple as possible.
+Basic knowledge of HTML5, CSS3, and JavaScrip. We are going to use some of the in-built functions of JavaScript. Also the styling will be as simple as possible.
 
 ## Setup
 
@@ -47,4 +46,23 @@ After setting up let's get going.
 
 ## The HTML
 
+Let's create the markup of our game. Change the title and create a heading. Now put a `p` tag of Score with a `span` of `id = "score"` for displaying the live score. Create a `div` element with `class = "board"`. We will create the game board using JavaScript. Your final `index.html` will look something like this.
 
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Memory Game</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <h1> ~ Memory Game ~ </h1>
+    <p>Score:<span id="score"></span></p>
+    <div class="board">
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
+```
