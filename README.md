@@ -29,6 +29,17 @@ It requires observation, concentration and a good memory to win.
 
 ![prerequisites](https://cloud-h9glprsfs.vercel.app/0prerequisites.png)
 Basic knowledge of HTML5, CSS3, and JavaScript.
-We are going to use some of the in-built functions of JavaScript.
+We are going to use some of the in-built functions of JavaScript. Also the styling is as simple as possible.
+
+## Setup
+
+[Repl.it](https://repl.it) is an online code editor. There is no need to install anything which makes coding simpler.
+
+Create a new [HTML,CSS,JS](https://repl.it/languages/html) project or you can just frok this repl [here](https://repl.it/@Giridharhackclu/Memory-game-starter#index.html). Your development environment will be ready in few seconds!
+
+![[Repl](https://cloud-oyhes1lns.vercel.app/0memory-game-starter.png)](https://repl.it/languages/html)
+
+It contains an empty `index.html` file linked with `style.css` and `script.js` files.
+
 
 
