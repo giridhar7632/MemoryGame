@@ -105,15 +105,15 @@ We completed the markup and styling of our project. Now flip over to `script.js`
 
 ## The JavaScript
 
-Create a DOM [event-listener](https://developer.mozilla.org/en-US/docs/Web/API/EventListener) for [`DOMContentLoaded`](https://developer.mozilla.org/en-US/docs/Web/API/Document/DOMContentLoaded_event). All our JavaScript code will be inside the event-listener, which will be excuted after the content loaded.
+Create a DOM [event-listener](https://developer.mozilla.org/en-US/docs/Web/API/EventListener) for the event [DOMContentLoaded](https://developer.mozilla.org/en-US/docs/Web/API/Document/DOMContentLoaded_event). All our JavaScript code will be inside the event-listener, which will be excuted after the content loaded.
 
 ```javascript
 document.addEventListener('DOMContentLoaded', () => {
-  
+  // code goes here!
   })
 ```
 
-Inside the event-listener, create an array for the cards which we use for the game. Add two of each cards for matching the cards. The links for the images are provided in the code below. If you downloaded the images or using your own images, then add the path to the images.
+Inside the event-listener, create an array for the cards which we use for the game. Add two of each cards for matching the cards. The public links for the images are provided in the code below. If you downloaded the images or using your own images, then add the relative path to the images.
 
 ```javascript
 document.addEventListener('DOMContentLoaded', () => {
@@ -170,4 +170,24 @@ document.addEventListener('DOMContentLoaded', () => {
 })
 ```
 
+Now we are going to creating our game board.
+
+## Game Board
+
+Pick up the `div` element with `class = "board"` using [querySelector](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector) and define it as `board`. Create a function `createBoard()` and let's loop over through elements in `cardArray` and add cards to our game board.
+
+```javascript
+const board = document.querySelector('.board')
+
+// create game board
+function createboard() {
+  for (let i = 0; i < cardArray.length; i++) {
+    var card = document.createElement('img')
+    card.setAttribute('src', 'imgs/1.png')
+    card.setAttribute('data-id', i)
+    card.addEventListener('click', flipCard)
+    board.appendChild(card)
+  }
+}
+```
 
