@@ -236,3 +236,7 @@ var cardsClickedId = []
   }
 createBoard()
 ```
+
+Don't forget to uncomment the event-listener of the card.
+Comment the `if` statement and check weather the images are changing or not. The output works like this.
+
