@@ -43,5 +43,5 @@ It contains an empty `index.html` file linked with `style.css` and `script.js` f
 
 We will be using some images for the cards. I will provide the public links for the images where needed. If you prefer to download, here ther are!
 
-<a href="https://cloud-5ystxzer7.vercel.app/06.png" download>![img1](https://cloud-5ystxzer7.vercel.app/06.png)</a>
+<a href="https://cloud-5ystxzer7.vercel.app/06.png" download="1">![img1](https://cloud-5ystxzer7.vercel.app/06.png)</a>
 
