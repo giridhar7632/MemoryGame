@@ -40,7 +40,7 @@ Create a new [HTML,CSS,JS](https://repl.it/languages/html) project or you can ju
 
 It contains an empty `index.html` file linked with `style.css` and `script.js` files.
 
-We will be using some images for the cards. I will provide the public links for the images where needed. If you prefer to download, you can download them [here](https://drive.google.com/drive/folders/128S-rB27-86ciSyJvjkfK2NhJeoOmsB3?usp=sharing). You can add your own images. Make sure they are 100 x 100 px to avoid further styling.
+We will create a simple 3x4 card game in this workshop. We use images for the cards. I will provide the public links for the images along the code. If you prefer to download, you can download them [here](https://drive.google.com/drive/folders/128S-rB27-86ciSyJvjkfK2NhJeoOmsB3?usp=sharing). You can also add your own images. Make sure they are 100 x 100 px to avoid further styling.
 
 After setting up let's get going.
 
@@ -66,3 +66,11 @@ Let's create the markup of our game. Change the title and create a heading. Now 
   </body>
 </html>
 ```
+
+Click the Run button to check your output, whether all the tags are working.
+
+![HTML output](https://cloud-6a90k3fzb.vercel.app/0htmlop.png)
+
+## Styling
+
+Now hop on to `stlye.css` file. Let's add some universal styles and styles for our game board. As mentioned before we are going to use images of 100 x 100 px, 
