@@ -37,7 +37,7 @@ We are going to use some of the in-built functions of JavaScript. Also the styli
 
 Create a new [HTML,CSS,JS](https://repl.it/languages/html) project or you can just frok this repl [here](https://repl.it/@Giridharhackclu/Memory-game-starter#index.html). Your development environment will be ready in few seconds!
 
-![[Repl](https://cloud-oyhes1lns.vercel.app/0memory-game-starter.png)](https://repl.it/languages/html)
+![Repl](https://cloud-oyhes1lns.vercel.app/0memory-game-starter.png)
 
 It contains an empty `index.html` file linked with `style.css` and `script.js` files.
 
