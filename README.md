@@ -240,3 +240,14 @@ createBoard()
 Don't forget to uncomment the event-listener of the card.
 Comment the `if` statement and check weather the images are changing or not. The output works like this.
 
+![Flip card](https://cloud-odqx6kfb8.vercel.app/0flipcard.gif)
+
+Until now, we created a flippable game board.
+
+![Woo!!](https://cloud-bos4syje4.vercel.app/0woo__.gif)
+
+Now that we have flipping cards, let’s handle the matching logic.
+
+## Match Card
+
+When we click the first card, it needs to wait until another card is flipped. So now, when the user clicks the second card. We will check to see if it’s a match. In order to do that, let’s create a function `checkForMatch()`. 
