@@ -261,4 +261,91 @@ Now that we have flipping cards, let’s handle the matching logic.
 
 ## Match Card
 
-When we click the first card, it needs to wait until another card is flipped. So now, when the user clicks the second card. We will check to see if it’s a match. In order to do that, let’s create a function `checkForMatch()`. Inside the function, select all the images we created using `querySelectorAll()`. Also get the two elements in `cardsClickedId` array into two variables `firstCard` and `secondCard` respectively. Then 
+When we click the first card, it needs to wait until another card is flipped. So now, when the user clicks the second card. We will check to see if it’s a match. In order to do that, let’s create a function `checkForMatch()`. Inside the function, select all the images we created using `querySelectorAll()`. Also get the two elements in `cardsClickedId` array into two variables `firstCard` and `secondCard` respectively. If the two cards match you get +1 to your score. These cards then disappear. If you click the same card again, a pop up alert notifies you and the cards flip back. If the next card you flip does not match, the cards flip back. The game continues until you match all the cards on the board.
+
+In place of the empty card, a blank image is displayed. Create a constant `blank` for the blank image.
+
+```javascript
+const blank = "https://cloud-5ystxzer7.vercel.app/6blank.png"
+```
+
+![blank](https://cloud-5ystxzer7.vercel.app/6blank.png)
+
+Once we have a matched, the blank cards are still "clickable" and that's a flaw as far as user experience goes. 
+
+![clickable](https://cloud-fmitdekvd.vercel.app/0removeevent.gif)
+
+So we have to remove the "click" eventListener of the matched pairs.
+```javascript
+ cards[firstCard].removeEventListener("click", flipCard) 
+ cards[secondcard].removeEventListener("click", flipCard)
+ ```
+
+Also create a variable `cardsMatched` array to push the matched cards. The length of `cardsMatched` array is your score. We have to add the live score into the `span` with `id = "score"` using `getElementById()` and `textContent`. After the logic executed, we have to clear both the `cardsClicked` and `cardsClickedId` arrays no matter what. 
+
+```javascript
+document.addEventListener('DOMContentLoaded', () => {
+  const cardArray = [....]
+  
+  const board = document.querySelector('.board')
+  const result = document.querySelector('#score')
+  const placeholder = "https://cloud-5ystxzer7.vercel.app/7placeholder.png"
+  const blank = "https://cloud-5ystxzer7.vercel.app/6blank.png"
+  var cardsClicked = []
+  var cardsClickedId = []
+  var cardsMatched = []
+
+  //creating game board
+    function createBoard() {....}
+
+  //flip  the card
+    function flipCard() {....}
+
+    //check for match
+    function checkForMatch() {
+      var cards = document.querySelectorAll('img')
+      const firstCard = cardsClickedId[0]
+      const secondCard = cardsClickedId[1]
+
+      if(firstCard === secondCard) {
+        cards[firstCard].setAttribute('src', placeholder)
+        cards[secondCard].setAttribute('src', placeholder)
+        alert('You have clicked the same image!')
+      }
+      else if (cardsClicked[0] === cardsClicked[1]) {
+        cards[firstCard].setAttribute('src', blank)
+        cards[secondCard].setAttribute('src', blank)
+        cards[firstCard].removeEventListener('click', flipCard)
+        cards[secondCard].removeEventListener('click', flipCard)
+        cardsMatched.push(cardsClicked)
+      } 
+      else {
+        cards[firstCard].setAttribute('src', placeholder)
+        cards[secondCard].setAttribute('src', placeholder)
+      }
+      cardsClicked = []
+      cardsClickedId = []
+      result.textContent = cardsMatched.length
+      if  (cardsMatched.length === cardArray.length/2) {
+        result.textContent = 'Congratulations! You found them all!'
+      }
+  }
+
+  createBoard()
+})
+
+```
+
+One thing you might notice that the cards are not random. So we have to shuffle them using `sort()` method. The [sort( )](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort) method sorts the elements of an array in place and returns the sorted array.
+
+```javascript
+cardArray.sort(() => 0.5 - Math.random())
+```
+
+Finally, we finished our memory game.
+
+![Hooray!!!](https://cloud-4ddhwjoi2.vercel.app/0hooray.gif)
+
+Check the final code [here](https://repl.it/@Giridharhackclu/Final-Memory-Game#script.js).
+
+![final output](https://cloud-cz47beweb.vercel.app/0final-memory-game.gif)
