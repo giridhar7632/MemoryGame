@@ -180,20 +180,59 @@ Create a image element using `document.createElement` for the every card. Using 
 
 ![place holder image](https://cloud-5ystxzer7.vercel.app/7placeholder.png)
 
-Here, [createElement()](https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement) creates the HTML element specified by tagName, [setAttribute()](https://developer.mozilla.org/en-US/docs/Web/API/Element/setAttribute) sets the value of an attribute on the specified element and [data attribute](https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes) allow us to store extra information on standard in the HTML tag. According to the game, we have to flip the card that is clicked. So add a `click` event-listener for the card. Every time a card get clicked, `flipCard` function will be excuted, which we will define later on the flow. Then add the `card` into the `board` using `appendChild()`. The method [appenChild()](https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild) adds a node to the end of the list of children of a specified parent node.
+Here, [createElement( )](https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement) creates the HTML element specified by tagName, [setAttribute( )](https://developer.mozilla.org/en-US/docs/Web/API/Element/setAttribute) sets the value of an attribute on the specified element and [data attribute](https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes) allow us to store extra information on standard in the HTML tag. According to the game, we have to flip the card that is clicked. So add a `click` event-listener for the card. Every time a card get clicked, `flipCard` function will be excuted, which we will define later on the flow. Then add the `card` into the `board` using `appendChild()`. The method [appenChild( )](https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild) adds a node to the end of the list of children of a specified parent node.
 
 ```javascript
 const board = document.querySelector('.board')
 
 // create game board
-function createboard() {
+function createBoard() {
   for (let i = 0; i < cardArray.length; i++) {
     var card = document.createElement('img')
     card.setAttribute('src', 'https://cloud-5ystxzer7.vercel.app/7placeholder.png')
     card.setAttribute('data-id', i)
-    card.addEventListener('click', flipCard)
+    //card.addEventListener('click', flipCard)
     board.appendChild(card)
   }
 }
+createBoard()
 ```
 
+For now, comment the event-listener as `flipCard` haven't yet defined and invoke the `createBoard()` function. Press the run button and see the your game board. It looks like this with all the cards turned down (i.e., placeholder images).
+
+![Temporary output](https://cloud-2vppbtbp1.vercel.app/0jsop.png)
+
+## Flip Card
+
+When a card is clicked, let's flip the card. Create two empty variable arrays `cardsClicked` and `cardsClickedId`. Create a function `flipCard()`. Then inside this function, create a variable `cardId`, which is the `data-id` attribute of the clicked card, using `getAttribute()`. Now add name of this card into `cardsClicked` array based on `cardId` using `push()` method. Also push the id of this card (i.e., `cardId`) into `cardsClickedId` array. Then add the front side of the card, image in `cardArray` corrresponding to `cardId`, using `setAttribute`.After selecting two cards, we have to execute the function `checkForMatch()`. For that, if the length of `cardsClicked` array is equal to `2`, add invoke `checkForMatch()` inside `setTimeOut()` so that everything doesn't happen too fast. 
+
+Here, [getAttribute( )](https://developer.mozilla.org/en-US/docs/Web/API/Element/getAttribute) returns the value of a specified attribute on the element, [.push( ) method](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push) adds one or more elements to the end of an array and returns the new length of the array and [setTimeOut( )](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout) sets a timer which executes a function or specified piece of code once the timer expires. 
+
+```javascript
+const board = document.querySelector('.board')
+var cardsClicked = []
+var cardsClickedId = []
+
+//creating game board
+  function createBoard() {
+    for (let i = 0; i < cardArray.length; i++) {
+      var card = document.createElement('img')
+      card.setAttribute('src', 'imgs/1.png')
+      card.setAttribute('data-id', i)
+      card.addEventListener('click', flipCard)
+      board.appendChild(card)
+    }
+  }
+
+//flip  the card
+  function flipCard() {
+    var cardId = this.getAttribute('data-id')
+    cardsClicked.push(cardArray[cardId].name)
+    cardsClickedId.push(cardId)
+    this.setAttribute('src', cardArray[cardId].img)
+    if (cardsClicked.length ===2) {
+      setTimeout(checkForMatch, 500)
+    }
+  }
+createBoard()
+```
