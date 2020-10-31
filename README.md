@@ -112,3 +112,62 @@ document.addEventListener('DOMContentLoaded', () => {
   
   })
 ```
+
+Inside the event-listener, create an array for the cards which we use for the game. Add two of each cards for matching the cards. The links for the images are provided in the code below. If you downloaded the images or using your own images, then add the path to the images.
+
+```javascript
+document.addEventListener('DOMContentLoaded', () => {
+  const cardArray = [
+    {
+      name: '1',
+      img:"https://cloud-5ystxzer7.vercel.app/11.png"
+    },
+    {
+      name: '2',
+      img:"https://cloud-5ystxzer7.vercel.app/22.png"
+    },
+    {
+      name: '3',
+      img:"https://cloud-5ystxzer7.vercel.app/33.png"
+    },
+    {
+      name: '4',
+      img:"https://cloud-5ystxzer7.vercel.app/44.png"
+    },
+    {
+      name: '5',
+      img:"https://cloud-5ystxzer7.vercel.app/55.png"
+    },
+    {
+      name: '6',
+      img:"https://cloud-5ystxzer7.vercel.app/06.png"
+    },
+    {
+      name: '1',
+      img:"https://cloud-5ystxzer7.vercel.app/11.png"
+    },
+    {
+      name: '2',
+      img:"https://cloud-5ystxzer7.vercel.app/22.png"
+    },
+    {
+      name: '3',
+      img:"https://cloud-5ystxzer7.vercel.app/33.png"
+    },
+    {
+      name: '4',
+      img:"https://cloud-5ystxzer7.vercel.app/44.png"
+    },
+    {
+      name: '5',
+      img:"https://cloud-5ystxzer7.vercel.app/55.png"
+    },
+    {
+      name: '6',
+      img:"https://cloud-5ystxzer7.vercel.app/06.png"
+    }
+  ]
+})
+```
+
+
