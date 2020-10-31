@@ -71,7 +71,7 @@ Click the Run button to check your output, whether all the tags are working.
 
 ![HTML output](https://cloud-6a90k3fzb.vercel.app/0htmlop.png)
 
-## Styling
+## The CSS
 
 Now hop on to `stlye.css` file. Let's add some universal styles and styles for our game board. As mentioned before we are going to use images of 100 x 100 px, set the board width to `300px` and height to `400px` for 3 x 4 card board. Add the styles below to your project.
 
@@ -174,9 +174,13 @@ Now we are going to creating our game board.
 
 ## Game Board
 
-Pick up the `div` element with `class = "board"` using [querySelector](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector) and define it as `board`. Create a function `createBoard()` and let's loop over through elements in `cardArray` using `for` loop and add cards to our game board.
+Pick up the `div` element with `class = "board"` using [querySelector](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector) and define it as `board`. Create a function `createBoard()` and loop over through elements in `cardArray` using `for` loop and add cards to our game board.
 
-Create a image element using `document.createElement` for the every card. Using `setAttribute()`, add `src` and `data-id` attributes to the image. Here, [createElement()](https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement) creates the HTML element specified by tagName, [setAttribute()](https://developer.mozilla.org/en-US/docs/Web/API/Element/setAttribute) sets the value of an attribute on the specified element and [data attribute](https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes) allow us to store extra information on standard in the HTML tag.
+Create a image element using `document.createElement` for the every card. Using `setAttribute()`, add `src` and `data-id` attributes to the image. Let's first set the `src` attribute to the placeholder image (i.e, let's assume the placeholder image as reversed card). The link to the placeholder image is given in the code, otherwise add the relative path to the image.
+
+![place holder image](https://cloud-5ystxzer7.vercel.app/7placeholder.png)
+
+Here, [createElement()](https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement) creates the HTML element specified by tagName, [setAttribute()](https://developer.mozilla.org/en-US/docs/Web/API/Element/setAttribute) sets the value of an attribute on the specified element and [data attribute](https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes) allow us to store extra information on standard in the HTML tag. According to the game, we have to flip the card that is clicked. So add a `click` event-listener for the card. Every time a card get clicked, `flipCard` function will be excuted, which we will define later on the flow. Then add the `card` into the `board` using `appendChild()`. The method [appenChild()](https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild) adds a node to the end of the list of children of a specified parent node.
 
 ```javascript
 const board = document.querySelector('.board')
@@ -185,7 +189,7 @@ const board = document.querySelector('.board')
 function createboard() {
   for (let i = 0; i < cardArray.length; i++) {
     var card = document.createElement('img')
-    card.setAttribute('src', 'imgs/1.png')
+    card.setAttribute('src', 'https://cloud-5ystxzer7.vercel.app/7placeholder.png')
     card.setAttribute('data-id', i)
     card.addEventListener('click', flipCard)
     board.appendChild(card)
