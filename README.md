@@ -176,7 +176,13 @@ Now we are going to creating our game board.
 
 Pick up the `div` element with `class = "board"` using [querySelector](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector) and define it as `board`. Create a function `createBoard()` and loop over through elements in `cardArray` using `for` loop and add cards to our game board.
 
-Create a image element using `document.createElement` for the every card. Using `setAttribute()`, add `src` and `data-id` attributes to the image. Let's first set the `src` attribute to the placeholder image (i.e, let's assume the placeholder image as reversed card). The link to the placeholder image is given in the code, otherwise add the relative path to the image.
+Create a constant for our placeholder image. We are going to use it many times.
+
+```javascript
+const placeholder = "https://cloud-5ystxzer7.vercel.app/7placeholder.png"
+```
+
+Create a `img` element using `document.createElement` for the every card. Using `setAttribute()`, add `src` and `data-id` attributes to the image. Let's first set the `src` attribute to the placeholder image (i.e, let's assume the placeholder image as reversed card). The link to the placeholder image is given in the code, otherwise add the relative path to the image.
 
 ![place holder image](https://cloud-5ystxzer7.vercel.app/7placeholder.png)
 
@@ -184,12 +190,13 @@ Here, [createElement( )](https://developer.mozilla.org/en-US/docs/Web/API/Docume
 
 ```javascript
 const board = document.querySelector('.board')
+const placeholder = "https://cloud-5ystxzer7.vercel.app/7placeholder.png"
 
 // create game board
 function createBoard() {
   for (let i = 0; i < cardArray.length; i++) {
     var card = document.createElement('img')
-    card.setAttribute('src', 'https://cloud-5ystxzer7.vercel.app/7placeholder.png')
+    card.setAttribute('src', placeholder)
     card.setAttribute('data-id', i)
     //card.addEventListener('click', flipCard)
     board.appendChild(card)
@@ -204,37 +211,41 @@ For now, comment the event-listener as `flipCard` haven't yet defined and invoke
 
 ## Flip Card
 
-When a card is clicked, let's flip the card. Create two empty variable arrays `cardsClicked` and `cardsClickedId`. Create a function `flipCard()`. Then inside this function, create a variable `cardId`, which is the `data-id` attribute of the clicked card, using `getAttribute()`. Now add name of this card into `cardsClicked` array based on `cardId` using `push()` method. Also push the id of this card (i.e., `cardId`) into `cardsClickedId` array. Then add the front side of the card, image in `cardArray` corrresponding to `cardId`, using `setAttribute`.After selecting two cards, we have to execute the function `checkForMatch()`. For that, if the length of `cardsClicked` array is equal to `2`, add invoke `checkForMatch()` inside `setTimeOut()` so that everything doesn't happen too fast. 
+When a card is clicked, let's flip the card. Create two empty variable arrays `cardsClicked` and `cardsClickedId`. Create a function `flipCard()`. Then inside this function, create a variable `cardId`, which is the `data-id` attribute of the clicked card, using `getAttribute()`. Now add name of this card into `cardsClicked` array based on `cardId` using `push()` method. Also push the id of this card (i.e., `cardId`) into `cardsClickedId` array. Then add the front side of the card, image in `cardArray` corrresponding to `cardId`, using `setAttribute`.After selecting two cards, we have to execute the function `checkForMatch()`. For that, if the length of `cardsClicked` array is equal to `2`, add invoke `checkForMatch()` inside `setTimeout()` so that everything doesn't happen too fast. 
 
-Here, [getAttribute( )](https://developer.mozilla.org/en-US/docs/Web/API/Element/getAttribute) returns the value of a specified attribute on the element, [.push( ) method](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push) adds one or more elements to the end of an array and returns the new length of the array and [setTimeOut( )](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout) sets a timer which executes a function or specified piece of code once the timer expires. 
+Here, [getAttribute( )](https://developer.mozilla.org/en-US/docs/Web/API/Element/getAttribute) returns the value of a specified attribute on the element, [.push( ) method](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push) adds one or more elements to the end of an array and returns the new length of the array and [setTimeout( )](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout) sets a timer which executes a function or specified piece of code once the timer expires. 
 
 ```javascript
-const board = document.querySelector('.board')
-var cardsClicked = []
-var cardsClickedId = []
+document.addEventListener('DOMContentLoaded', () => {
+  const cardArray = [....]
+  const board = document.querySelector('.board')
+  const placeholder = "https://cloud-5ystxzer7.vercel.app/7placeholder.png"
+  var cardsClicked = []
+  var cardsClickedId = []
 
-//creating game board
-  function createBoard() {
-    for (let i = 0; i < cardArray.length; i++) {
-      var card = document.createElement('img')
-      card.setAttribute('src', 'imgs/1.png')
-      card.setAttribute('data-id', i)
-      card.addEventListener('click', flipCard)
-      board.appendChild(card)
+  //creating game board
+    function createBoard() {
+      for (let i = 0; i < cardArray.length; i++) {
+        var card = document.createElement('img')
+        card.setAttribute('src', placeholder)
+        card.setAttribute('data-id', i)
+        card.addEventListener('click', flipCard)
+        board.appendChild(card)
+      }
     }
-  }
 
-//flip  the card
-  function flipCard() {
-    var cardId = this.getAttribute('data-id')
-    cardsClicked.push(cardArray[cardId].name)
-    cardsClickedId.push(cardId)
-    this.setAttribute('src', cardArray[cardId].img)
-    if (cardsClicked.length ===2) {
-      setTimeout(checkForMatch, 500)
+  //flip  the card
+    function flipCard() {
+      var cardId = this.getAttribute('data-id')
+      cardsClicked.push(cardArray[cardId].name)
+      cardsClickedId.push(cardId)
+      this.setAttribute('src', cardArray[cardId].img)
+      if (cardsClicked.length ===2) {
+        setTimeout(checkForMatch, 500)
+      }
     }
-  }
-createBoard()
+  createBoard()
+})
 ```
 
 Don't forget to uncomment the event-listener of the card.
@@ -244,10 +255,10 @@ Comment the `if` statement and check weather the images are changing or not. The
 
 Until now, we created a flippable game board.
 
-![Woo!!](https://cloud-bos4syje4.vercel.app/0woo__.gif)
+![Wooo!!](https://cloud-bos4syje4.vercel.app/0woo__.gif)
 
 Now that we have flipping cards, let’s handle the matching logic.
 
 ## Match Card
 
-When we click the first card, it needs to wait until another card is flipped. So now, when the user clicks the second card. We will check to see if it’s a match. In order to do that, let’s create a function `checkForMatch()`. 
+When we click the first card, it needs to wait until another card is flipped. So now, when the user clicks the second card. We will check to see if it’s a match. In order to do that, let’s create a function `checkForMatch()`. Inside the function, select all the images we created using `querySelectorAll()`. Also get the two elements in `cardsClickedId` array into two variables `firstCard` and `secondCard` respectively. Then 
