@@ -356,6 +356,23 @@ Check the final code [here](https://repl.it/@Giridharhackclu/Final-Memory-Game#s
 It's your turn for customize. 
 * Use your creativing and go wild with the styles. You can use desired theme, and create different card games. 
 * The game consists of an even number of cards, you can add different levels with the different dimensions of the board, eg:- 3 x 4, 4 x 4, 6 x 4, etc.
-* For more functionality of the game, you can add timer, track the no. of moves.
+* For more functionality of the game, you can add timer, track the number of moves.
+* You can also add two player mode with more number of cards.
+* Also there are many ways of creating the board. If you are good in JavaScript, use `innerHTML` method for adding cards to the board.
+
+After customising, do share with me on slack as [@Giridhar](https://hackclub.slack.com/team/U013E6KE9UJ). I'd love to see your project. 
+
+## Inspiration
+
+These are some other projects to inspire you.
+
+* **Hard Level Memory Game:** This 6 x 4 Memory Game also includes more functionality than the project in this workshop.<br>
+    [Demo](). [Source Code]().
+    
+* **Memory game using animations:** The cards animate while flipping, making them 3D. Advanced CSS3 is used in this project.<br>
+    [Demo](). [Source Code]().
+    
+* **Two player Memory Game:** This memory card game can be played by two players.<br>
+    [Demo](). [Source Code]().
 
 
