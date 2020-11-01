@@ -360,6 +360,7 @@ It's your turn for customize.
 * You can also add two player mode with more number of cards.
 * Also there are many ways of creating the board. If you are good in JavaScript, use `innerHTML` method for adding cards to the board.
 
+Hope you love this workshop! :v: <br>
 After customising, do share with me on slack as [@Giridhar](https://hackclub.slack.com/team/U013E6KE9UJ). I'd love to see your project. 
 
 ## Inspiration
