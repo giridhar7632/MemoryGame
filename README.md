@@ -371,7 +371,7 @@ These are some other projects to inspire you.
     [Demo](). [Source Code]().
     
 * **Memory game using animations:** The cards animate while flipping, making them 3D. Advanced CSS3 is used in this project.<br>
-    [Demo](). [Source Code]().
+    [Demo](https://memory-card.giridharhackclu.repl.co/). [Source Code](https://repl.it/@Giridharhackclu/Memory-Card#script.js).
     
 * **Two player Memory Game:** This memory card game can be played by two players.<br>
     [Demo](). [Source Code]().
