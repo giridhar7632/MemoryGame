@@ -8,7 +8,7 @@ author: '@giridhar7632'
 
 ![Final Project](https://cloud-lrj071vrh.vercel.app/0memory_game.gif)
 
-[Live Demo](https://memory-game.giridharhackclu.repl.co/) and [Source Code](https://repl.it/@Giridharhackclu/Memory-Game#index.html).
+ Check the [live demo](https://memory-game.giridharhackclu.repl.co/) and [source code](https://repl.it/@Giridharhackclu/Memory-Game#index.html).
 
 ## How to play...
 
